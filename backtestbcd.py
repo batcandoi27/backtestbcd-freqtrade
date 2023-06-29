@@ -32,7 +32,7 @@ def split_into_chunks(lst, chunk_size):
 # Parse command line arguments
 parser = argparse.ArgumentParser(description='Support backtest num_pair/total_pair once, different timeranges and output !')
 parser.add_argument('-n', '--num_pairs', type=int, help='Number of pairs in each command')
-parser.add_argument('-r', '--command', type=str, default="python3 backtestbcd.py -n 10 -r "freqtrade backtesting --strategy-list your_stra -c config_test.json --cache none --export signals --timeframe 1m --max-open-trades 3 --enable-protections", help='Command to execute')
+parser.add_argument('-r', '--command', type=str, default='python3 backtestbcd.py -n 10 -r "freqtrade backtesting --strategy-list your_stra -c config_test.json --cache none --export signals --timeframe 1m --max-open-trades 3 --enable-protections"', help='Command to execute')
 parser.add_argument('-tr', '--timerange', type=str, default="20230310-20230311 20230201-20230202 20220610-20220611 20230102-20230104 20230104-", help='Timerange')
 
 args = parser.parse_args()
